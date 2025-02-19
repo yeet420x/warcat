@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <!-- Social Icons in the top right corner -->
+  <!-- Social Icons in the top right corner (desktop) or bottom right (mobile) -->
   <div class="social-icons">
     <a href="https://t.me/acquireprofitevolve" target="_blank" rel="noopener noreferrer">
       <img src="tg.svg" alt="tg">
@@ -154,6 +154,13 @@
     
     .utility-box {
       max-width: 80%;
+    }
+    
+    /* Reposition social icons to bottom right on mobile */
+    .social-icons {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
     }
   }
 </style>
