@@ -46,8 +46,10 @@
   
   <!-- Centered Ape Image and Address Copy Section -->
   <div class="centered-container">
-    <img src="ApeSolo2.png" alt="Ape" class="centered-img">
-    <div class="address-copy-container">
+    <video autoplay loop muted class="centered-img">
+      <source src="walk.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>    <div class="address-copy-container">
       <span class="address-text">
         FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump
       </span>
@@ -89,7 +91,6 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50'%3E%3Cdefs%3E%3Cpattern id='apePattern' width='100' height='50' patternUnits='userSpaceOnUse'%3E%3Ctext x='0' y='40' font-size='40' fill='white' opacity='0.1' font-family='Roboto, sans-serif'%3E%24APE%3C/text%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23apePattern)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     overflow: hidden;
   }
