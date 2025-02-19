@@ -9,20 +9,20 @@
 
 <div class="ape-background">
   <!-- Address in the top left -->
-  <div class="absolute top-0 left-0 p-2 text-white">
+  <div class="address">
     FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump
   </div>
   
   <!-- Utility Box below the address -->
-  <div class="absolute top-0 left-0 mt-12 ml-2">
-    <p class="text-white mb-1">Utility</p>
-    <div class="p-6 rounded-md text-white border border-white flex items-center justify-center overflow-auto">
-      <pre class="ascii-art text-xs leading-tight text-center">{asciiArt}</pre>
+  <div class="utility-box">
+    <p class="utility-title">Utility</p>
+    <div class="ascii-container">
+      <pre class="ascii-art">{asciiArt}</pre>
     </div>
   </div>
 
   <!-- Social Icons in the top right corner -->
-  <div class="social-icons bg-white p-2 rounded-sm">
+  <div class="social-icons">
     <a href="https://t.me/acquireprofitevolve" target="_blank" rel="noopener noreferrer">
       <img src="tg.svg" alt="tg">
     </a>
@@ -36,14 +36,65 @@
 </div>
 
 <style>
+  /* Reset default margins and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent scrolling on body and html */
+  :global(body),
+  :global(html) {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
   .ape-background {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background-color: #000;
     /* SVG pattern with a Roboto-like font for a tight repeating "$APE" effect */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50'%3E%3Cdefs%3E%3Cpattern id='apePattern' width='100' height='50' patternUnits='userSpaceOnUse'%3E%3Ctext x='0' y='40' font-size='40' fill='white' opacity='0.1' font-family='Roboto, sans-serif'%3E%24APE%3C/text%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23apePattern)'/%3E%3C/svg%3E");
     background-repeat: repeat;
+    overflow: hidden;
+  }
+  
+  .address {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .utility-box {
+    position: absolute;
+    top: 48px;
+    left: 8px;
+    max-width: 95%;
+  }
+  
+  .utility-title {
+    color: white;
+    margin-bottom: 4px;
+  }
+  
+  .ascii-container {
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    max-width: 100%;
   }
   
   .centered-img {
@@ -63,6 +114,9 @@
     display: flex;
     gap: 10px;
     z-index: 1;
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
   }
   
   .social-icons img {
@@ -81,5 +135,25 @@
     font-family: monospace;
     white-space: pre;
     margin: 0;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .ascii-art {
+      font-size: 8px;
+    }
+    
+    .ascii-container {
+      padding: 12px;
+    }
+    
+    .utility-box {
+      max-width: 80%;
+    }
   }
 </style>
