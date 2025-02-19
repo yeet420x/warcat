@@ -24,7 +24,7 @@
   <!-- Social Icons in the top right corner (desktop) or bottom right (mobile) -->
   <div class="social-icons">
     <a href="https://www.dextools.io/app/en/solana/pair-explorer/FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump?t=1739924199849" target="_blank" rel="noopener noreferrer">
-      <img src="dextools.svg" alt="dex">
+      <img src="dextools.svg" alt="dex" style="filter: brightness(0); width: 30px; height: 30px;">
     </a>
     <a href="https://t.me/acquireprofitevolve" target="_blank" rel="noopener noreferrer">
       <img src="tg.svg" alt="tg">
