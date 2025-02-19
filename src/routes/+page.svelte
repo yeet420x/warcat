@@ -14,12 +14,12 @@
   </div>
   
   <!-- Utility Box below the address -->
-  <div class="utility-box">
+  <!-- <div class="utility-box">
     <p class="utility-title">Utility</p>
     <div class="ascii-container">
       <pre class="ascii-art">{asciiArt}</pre>
     </div>
-  </div>
+  </div> -->
 
   <!-- Social Icons in the top right corner (desktop) or bottom right (mobile) -->
   <div class="social-icons">
