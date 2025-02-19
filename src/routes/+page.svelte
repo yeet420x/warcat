@@ -8,11 +8,6 @@
 </script>
 
 <div class="ape-background">
-  <!-- Address in the top left -->
-  <div class="address">
-    FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump
-  </div>
-  
   <!-- Utility Box below the address -->
   <div class="utility-box">
     <div class="ascii-container">
@@ -22,7 +17,10 @@
 
   <!-- Social Icons in the top right corner (desktop) or bottom right (mobile) -->
   <div class="social-icons">
-    <a href="https://www.dextools.io/app/en/solana/pair-explorer/FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump?t=1739924199849" target="_blank" rel="noopener noreferrer">
+    <a href="https://dexscreener.com/solana/hb4wn99ahtgykcu6uwznwnrxbdjtbmnhooygnhzxgc5r" target="_blank" rel="noopener noreferrer">
+      <img src="dexscreener.svg" alt="dexs" style="filter: brightness(0); width: 30px; height: 30px;">
+    </a>
+    <a href="https://www.dextools.io/app/en/solana/pair-explorer/FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump" target="_blank" rel="noopener noreferrer">
       <img src="dextools.svg" alt="dex" style="filter: brightness(0); width: 30px; height: 30px;">
     </a>
     <a href="https://t.me/acquireprofitevolve" target="_blank" rel="noopener noreferrer">
@@ -77,8 +75,8 @@
   
   .utility-box {
     position: absolute;
-    top: 48px;
-    left: 8px;
+    top: 20px;
+    left: 20px;
     max-width: 95%;
   }
   
