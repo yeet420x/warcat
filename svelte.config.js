@@ -15,7 +15,11 @@ const config = {
 			out: 'build',
 			precompress: false,
 			envPrefix: '',
-			polyfill: true
+			polyfill: true,
+			env: {
+				host: '0.0.0.0',
+				port: process.env.PORT || 8080
+			}
 		})
 	}
 };
