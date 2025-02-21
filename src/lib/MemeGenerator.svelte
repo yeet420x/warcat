@@ -67,7 +67,7 @@
       name: 'neck',
       options: [
         'none',
-        'yeezus chain',
+        'gold chain',
         'scarf',
         'spikder_collars'
       ],
