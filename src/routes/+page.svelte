@@ -297,27 +297,39 @@
   }
   .content-wrapper {
     position: relative;
-    z-index: 2;
-    margin-top: 100vh;
+    z-index: 5;
+    padding-top: 100vh;
   }
   .spacer {
     height: 100vh;
   }
   .generator-section {
+    position: relative;
     background: #1a1a1a;
     padding: 4rem 1rem;
     min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .container {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    position: relative;
+    z-index: 6;
   }
   h2 {
     color: #fff;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-family: monospace;
+  }
+  /* Ensure MemeGenerator component is visible */
+  :global(.generator-section :global(canvas)) {
+    max-width: 100%;
+    height: auto;
   }
 </style>
