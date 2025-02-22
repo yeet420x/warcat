@@ -44,7 +44,10 @@
   <!-- Matrix Falling Background (Layered above the video) -->
   <div class="matrix-container">
     {#each matrixItems as item}
-      <div class="matrix-letter" style="left: {item.left}%; animation-delay: {item.delay}s; animation-duration: {item.duration}s;">
+      <div
+        class="matrix-letter"
+        style="left: {item.left}%; animation-delay: {item.delay}s; animation-duration: {item.duration}s"
+      >
         $APE
       </div>
     {/each}
@@ -53,8 +56,8 @@
   <!-- Central Address Copy Container (Above the matrix) -->
   <div class="central-address">
     <div class="address-copy-container">
-      <span class="address-text">{tokenMintAddress}</span>
-      <button class="copy-btn" on:click={copyAddress} title="Copy Address">
+      <span>{tokenMintAddress}</span>
+      <button class="copy-btn" on:click={copyAddress}>
         <!-- Copy Icon SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="800px" width="800px" version="1.1" viewBox="0 0 64 64" xml:space="preserve">
           <g>
@@ -89,7 +92,7 @@
   </div>
 
   {#if showNotification}
-    <div class="notification">Address copied to clipboard!</div>
+    <div class="notification">Address copied!</div>
   {/if}
 </div>
 
@@ -121,9 +124,10 @@
   .ape-background {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #000;
     overflow: hidden;
+    z-index: 1;
   }
   /* Central Video: placed at the bottom layer */
   .central-video {
@@ -146,7 +150,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -2;
+    z-index: 2;
   }
   .matrix-letter {
     position: absolute;
@@ -174,7 +178,7 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 3;
   }
   .address-copy-container {
     display: inline-flex;
@@ -194,6 +198,7 @@
     display: flex;
     align-items: center;
     color: #fff;
+    z-index: 4;
   }
   .copy-btn svg {
     width: 20px;
@@ -260,12 +265,12 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: rgba(0, 255, 0, 0.8);
+    color: white;
     padding: 10px 20px;
-    border-radius: 4px;
-    z-index: 5;
-    transition: opacity 0.3s;
+    border-radius: 5px;
+    font-family: monospace;
+    z-index: 9999;
   }
   @media (max-width: 768px) {
     .social-icons {
@@ -292,7 +297,8 @@
   }
   .content-wrapper {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    margin-top: 100vh;
   }
   .spacer {
     height: 100vh;
@@ -301,9 +307,6 @@
     background: #1a1a1a;
     padding: 4rem 1rem;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .container {
     max-width: 1200px;
