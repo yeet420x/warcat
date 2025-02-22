@@ -32,8 +32,39 @@
   }
 </script>
 
+<!-- Interactive layer with the only set of icons we want -->
+<div class="interactive-layer">
+  <div class="social-links">
+    <a href="https://t.me/apesol_portal" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="tg.svg" alt="Telegram" />
+    </a>
+    <a href="https://twitter.com/apesolcoin" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="x.svg" alt="Twitter" />
+    </a>
+    <a href="https://dexscreener.com/solana/eyjskiysj15vmrg2dpxpscagcrw3cp4xrfjbdzn8pgcu" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="dexscreener.svg" alt="Raydium" />
+    </a>
+  </div>
+
+  <!-- ASCII Art -->
+  <pre class="ascii-art">{asciiArt}</pre>
+
+  <!-- Keep copy address section -->
+  <div class="central-address">
+    <div class="address-copy-container">
+      <span>{tokenMintAddress}</span>
+      <button class="copy-btn" on:click={copyAddress}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24px" width="24px" version="1.1" viewBox="0 0 64 64">
+          <path d="M53.7,11.9H32.3V8.7c0-1.4-1.1-2.5-2.5-2.5h-21c-1.4,0-2.5,1.1-2.5,2.5v29.7c0,1.4,1.1,2.5,2.5,2.5h3.2v13.5 c0,1.4,1.1,2.5,2.5,2.5h39.2c1.4,0,2.5-1.1,2.5-2.5V14.4C56.2,13,55.1,11.9,53.7,11.9z M11.3,35.9H8.8V8.7h21v3.2H14.5 c-1.4,0-2.5,1.1-2.5,2.5v21.5H11.3z M51.2,51.9H14.5V14.4h36.7V51.9z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Background layer - remove any duplicate icons from here -->
 <div class="ape-background">
-  <!-- Central Video (Bottom Layer) -->
+  <!-- Only keep video and matrix animation here -->
   <div class="central-video">
     <video autoplay loop muted class="centered-img">
       <source src="walk.mp4" type="video/mp4" />
@@ -41,7 +72,6 @@
     </video>
   </div>
 
-  <!-- Matrix Falling Background (Layered above the video) -->
   <div class="matrix-container">
     {#each matrixItems as item}
       <div
@@ -52,51 +82,9 @@
       </div>
     {/each}
   </div>
-
-  <!-- Central Address Copy Container (Above the matrix) -->
-  <div class="central-address">
-    <div class="address-copy-container">
-      <span>{tokenMintAddress}</span>
-      <button class="copy-btn" on:click={copyAddress}>
-        <!-- Copy Icon SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="800px" width="800px" version="1.1" viewBox="0 0 64 64" xml:space="preserve">
-          <g>
-            <path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228 C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999 c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64 h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002 C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228 c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999 c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699 c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946 c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999 h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
-          </g>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Content Overlay for Utility Box & Social Icons -->
-  <div class="content-overlay">
-    <div class="utility-box">
-      <div class="ascii-container">
-        <pre class="ascii-art">{asciiArt}</pre>
-      </div>
-    </div>
-    <div class="social-icons">
-      <a href="https://dexscreener.com/solana/hb4wn99ahtgykcu6uwznwnrxbdjtbmnhooygnhzxgc5r" target="_blank" rel="noopener noreferrer">
-        <img src="dexscreener.svg" alt="dexs" />
-      </a>
-      <a href="https://www.dextools.io/app/en/solana/pair-explorer/FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump" target="_blank" rel="noopener noreferrer">
-        <img src="dextools.svg" alt="dex" />
-      </a>
-      <a href="https://t.me/acquireprofitevolve" target="_blank" rel="noopener noreferrer">
-        <img src="tg.svg" alt="tg" />
-      </a>
-      <a href="https://x.com/evolutionapesol" target="_blank" rel="noopener noreferrer">
-        <img src="x.svg" alt="x" />
-      </a>
-    </div>
-  </div>
-
-  {#if showNotification}
-    <div class="notification">Address copied!</div>
-  {/if}
 </div>
 
-<div class="content-wrapper">
+<div class="content-wrapper" style="z-index: 10;">
   <div class="spacer"></div>
   <section class="generator-section">
     <div class="container">
@@ -128,6 +116,7 @@
     background-color: #000;
     overflow: hidden;
     z-index: 1;
+    pointer-events: none;
   }
   /* Central Video: placed at the bottom layer */
   .central-video {
@@ -178,7 +167,8 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 1000;
+    pointer-events: auto;
   }
   .address-copy-container {
     display: inline-flex;
@@ -189,6 +179,7 @@
     color: #fff;
     font-family: monospace;
     font-size: 14px;
+    pointer-events: auto;
   }
   .copy-btn {
     background: none;
@@ -198,7 +189,7 @@
     display: flex;
     align-items: center;
     color: #fff;
-    z-index: 4;
+    pointer-events: auto;
   }
   .copy-btn svg {
     width: 20px;
@@ -207,58 +198,6 @@
   }
   .copy-btn:hover svg {
     opacity: 0.8;
-  }
-  /* Content Overlay for Utility Box & Social Icons */
-  .content-overlay {
-    position: relative;
-    z-index: 2;
-  }
-  .utility-box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 95%;
-    z-index: 3;
-  }
-  .ascii-container {
-    padding: 6px 24px 24px 24px;
-    border-radius: 6px;
-    border: 1px solid #fff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-    max-width: 100%;
-  }
-  .social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
-    z-index: 4;
-    background-color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-  }
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-    transition: opacity 0.3s;
-  }
-  .social-icons img:hover {
-    opacity: 0.8;
-  }
-  .ascii-art {
-    font-family: monospace;
-    white-space: pre;
-    font-size: 12px;
-    line-height: 1.2;
-    text-align: center;
-    max-width: 100%;
-    overflow-x: auto;
   }
   .notification {
     position: fixed;
@@ -273,13 +212,6 @@
     z-index: 9999;
   }
   @media (max-width: 768px) {
-    .social-icons {
-      position: fixed; /* Changed from absolute to fixed */
-      top: auto;
-      bottom: 20px;
-      right: 20px;
-      z-index: 7;
-    }
     .centered-img {
       width: 100%;
       max-width: 100%;
@@ -297,7 +229,7 @@
   }
   .content-wrapper {
     position: relative;
-    z-index: 5;
+    z-index: 10;
     padding-top: 100vh;
   }
   .spacer {
@@ -305,6 +237,7 @@
   }
   .generator-section {
     position: relative;
+    z-index: 11;
     background: #1a1a1a;
     padding: 4rem 1rem;
     min-height: 100vh;
@@ -314,12 +247,12 @@
     align-items: center;
   }
   .container {
+    position: relative;
+    z-index: 12;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    position: relative;
-    z-index: 6;
   }
   h2 {
     color: #fff;
@@ -331,5 +264,66 @@
   :global(.generator-section :global(canvas)) {
     max-width: 100%;
     height: auto;
+  }
+  .central-address, 
+  .copy-btn,
+  .address-copy-container {
+    pointer-events: auto;
+  }
+  .interactive-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .social-links {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    pointer-events: auto;
+    z-index: 1000;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+  }
+
+  .social-link img {
+    width: 24px;
+    height: 24px;
+    filter: none;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .social-link:hover img {
+    opacity: 0.8;
+  }
+
+  .ascii-art {
+    position: fixed;
+    top: 20px;
+    left: 10%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: monospace;
+    white-space: pre;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 14px;
+    line-height: 1.2;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   }
 </style>
