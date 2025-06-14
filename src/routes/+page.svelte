@@ -47,9 +47,7 @@
     <a href="https://dexscreener.com/solana/92FCEw6z7MJHSMRbUKMxqu6G5QhMkY1VDiEy985xDy4i" target="_blank" rel="noopener noreferrer" class="social-link">
       <img src="dexscreener.svg" alt="DexScreener" />
     </a>
-    <a href="https://www.dextools.io/token/apesol" target="_blank" rel="noopener noreferrer" class="social-link">
-      <img src="dextools.svg" alt="DexTools" />
-    </a>
+   
   </div>
 
   <!-- ASCII Art -->
