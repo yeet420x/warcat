@@ -1,12 +1,13 @@
 <script>
   import MemeGenerator from '$lib/MemeGenerator.svelte';
 
+
   // Removed token holders logic and onMount
 
   let showNotification = false;
 
   // The token mint address
-  const tokenMintAddress = "FRwjNqzxosT9nJqxY5aoucoskBq8a1UyjKobVQ4Fpump";
+  const tokenMintAddress = "HEys4mLWsX33ipPy8FLt9HSkC9Q8NaYXBJQ";
 
   // Generate falling "$APE" elements for the background effect
   const matrixCount = 30;
@@ -17,9 +18,13 @@
   }));
 
   const asciiArt = `
-░█▀█░█▀█░█▀▀░░░█▀▀░▀█▀░█▀▄░█▀█░█▀█░█▀▀
-░█▀█░█▀▀░█▀▀░░░▀▀█░░█░░█▀▄░█░█░█░█░█░█
-░▀░▀░▀░░░▀▀▀░░░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀
+  ██     ██  █████  ██████      ██████   █████  ████████ 
+  ██     ██ ██   ██ ██   ██     ██      ██   ██    ██    
+  ██  █  ██ ███████ ██████      ██      ███████    ██    
+  ██ ███ ██ ██   ██ ██   ██     ██      ██   ██    ██    
+   ███ ███  ██   ██ ██   ██      ██████ ██   ██    ██    
+                                                       
+                                                                                           
 `;
 
   function copyAddress() {
@@ -35,14 +40,15 @@
 <!-- Interactive layer with the only set of icons we want -->
 <div class="interactive-layer">
   <div class="social-links">
-    <a href="https://t.me/apesol_portal" target="_blank" rel="noopener noreferrer" class="social-link">
-      <img src="tg.svg" alt="Telegram" />
-    </a>
-    <a href="https://twitter.com/apesolcoin" target="_blank" rel="noopener noreferrer" class="social-link">
+    
+    <a href="https://x.com/ogwarcat" target="_blank" rel="noopener noreferrer" class="social-link">
       <img src="x.svg" alt="Twitter" />
     </a>
-    <a href="https://dexscreener.com/solana/eyjskiysj15vmrg2dpxpscagcrw3cp4xrfjbdzn8pgcu" target="_blank" rel="noopener noreferrer" class="social-link">
-      <img src="dexscreener.svg" alt="Raydium" />
+    <a href="https://dexscreener.com/solana/92FCEw6z7MJHSMRbUKMxqu6G5QhMkY1VDiEy985xDy4i" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="dexscreener.svg" alt="DexScreener" />
+    </a>
+    <a href="https://www.dextools.io/token/apesol" target="_blank" rel="noopener noreferrer" class="social-link">
+      <img src="dextools.svg" alt="DexTools" />
     </a>
   </div>
 
@@ -66,10 +72,7 @@
 <div class="ape-background">
   <!-- Only keep video and matrix animation here -->
   <div class="central-video">
-    <video autoplay loop muted class="centered-img">
-      <source src="walk.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <img src="evolution.jpg" alt="evolution" class="centered-img" />
   </div>
 
   <div class="matrix-container">
@@ -78,7 +81,7 @@
         class="matrix-letter"
         style="left: {item.left}%; animation-delay: {item.delay}s; animation-duration: {item.duration}s"
       >
-        $APE
+        $WCAT
       </div>
     {/each}
   </div>
@@ -88,8 +91,25 @@
   <div class="spacer"></div>
   <section class="generator-section">
     <div class="container">
-      <h2>APE Generator</h2>
-      <MemeGenerator />
+      <h2>WAR CAT Generator</h2>
+      COMING SOON, USE THESE PFPs in the meantime: 
+
+      <div class="pfp-gallery">
+        <img src="/cat1.jpg" alt="Cat 1" width="100" />
+        <img src="/cat2.jpg" alt="Cat 2" width="100" />
+        <img src="/cat3.jpg" alt="Cat 3" width="100" />
+        <img src="/cat4.jpg" alt="Cat 4" width="100" />
+        <img src="/cat5.jpg" alt="Cat 5" width="100" />
+        <img src="/cat6.jpg" alt="Cat 6" width="100" />
+        <img src="/cat7.jpg" alt="Cat 7" width="100" />
+        <img src="/cat8.jpg" alt="Cat 8" width="100" />
+        <img src="/cat9.jpg" alt="Cat 9" width="100" />
+        <img src="/cat10.jpg" alt="Cat 10" width="100" />
+        <img src="/cat11.jpg" alt="Cat 11" width="100" />
+        <img src="/cat12.jpg" alt="Cat 12" width="100" />
+        <img src="/cat13.jpg" alt="Cat 13" width="100" />
+        <img src="/cat14.jpg" alt="Cat 14" width="100" />
+      </div>
     </div>
   </section>
 </div>

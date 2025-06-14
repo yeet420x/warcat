@@ -7,35 +7,17 @@
 
   // Updated traits based on your folder structure
   let traits: Trait[] = [
-    {
-      name: 'backgrounds',
-      options: [
-        'none',
-        'blue',
-        'brown',
-        'green',
-        'grey',
-        'island',
-        'magma',
-        'purple',
-        'red',
-        'yellow'
-      ],
-      selected: 'none'
-    },
+   
+      
     {
       name: 'body_color',
       options: [
         'none',
-        'base_monkey',
-        'blue_monkey',
-        'brown_monkey',
-        'gold_monkey',
-        'green_monkey',
-        'orange',
-        'purple_monkey',
-        'red_monkey',
-        'yellow_monkey'
+        'black',
+        'siamese',
+        'tiger',
+        'white',
+        'pink'
       ],
       selected: 'none'
     },
@@ -43,7 +25,7 @@
       name: 'glasses',
       options: [
         'none',
-        'laser_eyes',
+        'rifle',
         'mog_glasses',
         'moneybag',
         'nerd_glasses',
@@ -88,7 +70,7 @@
   ];
 
   // Base image path
-  const baseImagePath = '/ape-base.jpg'; // Make sure to add this image to your static/public folder
+  const baseImagePath = '/ape-base.png'; // Make sure to add this image to your static/public folder
 
   let canvas: HTMLCanvasElement;
 
@@ -123,6 +105,12 @@
     if (!ctx) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the base image first (PNG)
+    const baseImg = new Image();
+    baseImg.src = baseImagePath; // This should be a .png
+    await new Promise(resolve => baseImg.onload = resolve);
+    ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
 
     // Draw traits in specific order (bottom to top)
     for (const traitName of renderOrder) {
