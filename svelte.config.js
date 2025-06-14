@@ -13,7 +13,7 @@ const config = {
 		adapter: adapter(),
 		// default options are shown
 
-		precompress: false,
+		precompress: true,
 		envPrefix: '',
 		polyfill: true,
 		env: {
