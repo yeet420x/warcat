@@ -12,7 +12,7 @@ const config = {
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		adapter: adapter(),
 		// default options are shown
-		out: 'build',
+
 		precompress: false,
 		envPrefix: '',
 		polyfill: true,
