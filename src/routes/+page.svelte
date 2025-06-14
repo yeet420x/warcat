@@ -7,7 +7,7 @@
   let showNotification = false;
 
   // The token mint address
-  const tokenMintAddress = "HEys4mLWsX33ipPy8FLt9HSkC9Q8NaYXBJQ";
+  const tokenMintAddress = "HEys4mLWsX33ipPy8FLt9HSkC9Q8NaYXBJQbNr5UsQ4r";
 
   // Generate falling "$APE" elements for the background effect
   const matrixCount = 30;
