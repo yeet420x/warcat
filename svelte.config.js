@@ -13,13 +13,9 @@ const config = {
 		adapter: adapter(),
 		// default options are shown
 
-		envPrefix: '',
-		polyfill: true,
-		env: {
-			host: '0.0.0.0',
-			port: process.env.PORT || 8080
+		
 		}
 	}
-};
+;
 
 export default config;
